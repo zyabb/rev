@@ -162,34 +162,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	};
 </script>
   <script>
-function getParam(name) { name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]"); var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search); return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " ")); }
-Webflow.push(function() {
-  $('input:text, input[type=email]').each(function() {
-    var paramValue = getParam(this.id);
-    if(this.value == "" && paramValue != "") this.value = paramValue;
-  });
-});
-</script>
-  <script>
 	const postContent = $('.post-container>.w-richtext *:contains(fsz-1)');
   	$(postContent).each(function() {
     	$(this).html($(this).text())
     });
-</script>
-  <script>
-   //var careersBanner = Cookies.get('careersBanner');
- // if(careersBanner){
-  //	$(".hiring-block").hide();
-  //} else{
-    // Cookies.set('careersBanner','false');
-  	//$(".hiring-block").show();
- // }
-  $(document).ready(function() {
-  	const gift = new URLSearchParams(window.location.search).get("gift");
-      if (!!gift) {
-        $('.modal-gift').show()
-      }
-  })
 </script>
 </body>
 </html>
